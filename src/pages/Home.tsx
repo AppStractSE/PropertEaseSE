@@ -4,22 +4,21 @@ import Hero from '../components/Hero';
 import Pricing from '../components/Pricing';
 
 const Home = () => {
-  const contactRef = useRef<HTMLDivElement>(null);
+  const pricingRef = useRef<HTMLDivElement>(null);
 
-  const scrolltoContact = () => {
-    if (contactRef.current) {
-      contactRef.current.scrollIntoView({
+  const scrollToPricing = () => {
+    if (pricingRef.current) {
+      pricingRef.current.scrollIntoView({
         behavior: 'auto',
-        block: 'center',
+        block: window.innerWidth > 768 ? 'center' : 'start',
       });
     }
   };
-
   return (
     <>
-      <Hero scrollToContact={scrolltoContact} />
+      <Hero scrollToPricing={scrollToPricing} />
       <Features />
-      <Pricing scrollRef={contactRef} />
+      <Pricing scrollRef={pricingRef} />
     </>
   );
 };

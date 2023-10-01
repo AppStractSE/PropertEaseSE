@@ -1,10 +1,10 @@
 import { BsArrowRight } from 'react-icons/bs';
 
 interface Props {
-  scrollToContact: () => void;
+  scrollToPricing: () => void;
 }
 
-const Hero = ({ scrollToContact }: Props) => {
+const Hero = ({ scrollToPricing }: Props) => {
   return (
     <section className="dark:bg-primary-800 bg-primary-200">
       <div className="grid max-w-screen-2xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-24 lg:grid-cols-12">
@@ -19,7 +19,7 @@ const Hero = ({ scrollToContact }: Props) => {
             fastighetsförvaltning.
           </p>
           <a
-            onClick={scrollToContact}
+            onClick={scrollToPricing}
             className="cursor-pointer inline-flex items-center justify-center px-6 py-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none"
           >
             <span>Till prisplaner</span>
