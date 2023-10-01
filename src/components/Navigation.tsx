@@ -11,7 +11,9 @@ const Navigation = () => {
               className="mr-3 h-6 sm:h-9"
               alt="PE Logo"
             />
-            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">PropertEase</span>
+            <span className="hidden md:block self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+              PropertEase
+            </span>
           </Link>
           <div className="flex items-center lg:order-2">
             <a
