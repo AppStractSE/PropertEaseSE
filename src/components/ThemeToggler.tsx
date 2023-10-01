@@ -8,7 +8,7 @@ const ThemeToggler = () => {
 
   useEffect(() => {
     localStorage.setItem('darkMode', darkMode.toString()); // Convert boolean to string
-    console.log(darkMode);
+    document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
   }, [darkMode]);
 
   return (
