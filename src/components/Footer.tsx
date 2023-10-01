@@ -7,27 +7,26 @@ const Footer = () => {
             <a href="/" className="flex items-center">
               <img
                 src="https://srasolutions.com.au/wp-content/uploads/2017/02/Logos-fake-mock-up-illust-ss143531671-2.png"
-                className="h-8 mr-3"
+                className="h-24 mr-3"
                 alt="PE Logo"
               />
-              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">PropertEase</span>
             </a>
           </div>
-            <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Information</h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
+          <div>
+            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Information</h2>
+            <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <li className="mb-4">
+                <a href="#" className="hover:underline">
                   Integritetspolicy
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:underline">
-                    Användarvillkor
-                  </a>
-                </li>
-              </ul>
-            </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline">
+                  Användarvillkor
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
