@@ -20,14 +20,14 @@ const Features = () => {
                 <li className="flex space-x-3">
                   <BsPatchCheckFill size={28} className="text-primary-600 dark:text-green-400" />
                   <div>
-                    <div className='text-black dark:text-white'>{feature.title}</div>
+                    <div className="text-black dark:text-white">{feature.title}</div>
                     <div className="text-sm">{feature.description}</div>
                   </div>
                 </li>
               ))}
             </ul>
           </div>
-          <img className="hidden lg:block rounded-lg" src={feature.image} alt={feature.title} />
+          <img className="rounded-md" src={feature.image} alt={feature.title} />
         </div>
       ))}
     </section>
