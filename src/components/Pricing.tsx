@@ -17,7 +17,7 @@ const Pricing = ({ scrollRef }: Props) => {
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`flex flex-col p-6 mx-auto w-full text-center text-gray-900 bg-white rounded-lg border border-gray-300 dark:border-stone-900 xl:p-8 dark:bg-primary-950 dark:text-white hover:border-primary-300 hover:bg-primary-50 dark:hover:bg-primary-900 hover:shadow-2xl ${
+              className={`cursor-default flex flex-col p-6 mx-auto w-full text-center text-gray-900 bg-white rounded-lg border border-gray-300 dark:border-stone-900 xl:p-8 dark:bg-primary-950 dark:text-white hover:border-primary-300 hover:bg-primary-50 dark:hover:bg-primary-900 hover:shadow-2xl ${
                 plan.mostPopular ? 'relative border-primary-600 border-2 mp-container' : ''
               }`}
             >
