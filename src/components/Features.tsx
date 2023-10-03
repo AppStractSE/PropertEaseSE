@@ -3,7 +3,7 @@ import { features } from '../data/features';
 
 const Features = () => {
   return (
-    <section className="bg-white dark:bg-stone-900">
+    <section className="bg-white dark:bg-[#191919]">
       {features.map((feature, index) => (
         <div className="max-w-screen-2xl mx-auto gap-16 xl:gap-32 lg:grid lg:grid-cols-2 px-4 py-8 lg:py-14">
           <div

@@ -5,7 +5,7 @@ interface Props {
 }
 const Pricing = ({ scrollRef }: Props) => {
   return (
-    <section ref={scrollRef} className="bg-white dark:bg-stone-800" id="pricing">
+    <section ref={scrollRef} className="bg-white dark:bg-[#191919]" id="pricing">
       <div className="py-8 px-4 mx-auto max-w-screen-2xl lg:py-16 lg:px-6">
         <div className="max-w-screen-md text-center md:text-left mb-8 lg:mb-12">
           <h2 className="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">Prisplaner för alla</h2>

@@ -1,9 +1,25 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Navigation = () => {
+  const [scroll, setScroll] = useState(false);
+  useEffect(() => {
+    const onScroll = () => {
+      const scrollCheck = window.scrollY > 0;
+      if (scrollCheck !== scroll) {
+        setScroll(scrollCheck);
+      }
+    }
+    document.addEventListener("scroll", onScroll);
+    return () => {
+      document.removeEventListener("scroll", onScroll);
+    }
+  }
+  );
+  
   return (
-    <header className="sticky top-0">
-      <nav className="bg-white border-gray-200 p-4 lg:px-6 dark:bg-stone-900">
+    <header className={`sticky top-0 transition-all ${scroll ? "shadow-xl" : "shadow-2xl"}`}>
+      <nav className={`bg-white border-gray-200 transition-all dark:bg-[#111] ${scroll ? "p-4 lg:px-6" : "p-8 lg:px-6"}`}>
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl">
           <Link to="/" className="flex items-center">
             <img
