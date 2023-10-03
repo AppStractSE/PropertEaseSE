@@ -1,4 +1,11 @@
-export const features = [
+interface Feature {
+  title: string;
+  description: string;
+  features: { title: string; description: string }[];
+  image: string;
+}
+
+export const features: Feature[] = [
   {
     title: 'Enkelt, snabbt och effektivt',
     description:
