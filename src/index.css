@@ -34,3 +34,7 @@ body {
 #root {
   margin: 0 auto;
 }
+
+.mp-container:hover .mp-highlight {
+  box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.300);
+}

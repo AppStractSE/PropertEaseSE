@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import ThemeToggler from './ThemeToggler';
 
 const Navigation = () => {
   const [scroll, setScroll] = useState(false);
@@ -9,17 +10,18 @@ const Navigation = () => {
       if (scrollCheck !== scroll) {
         setScroll(scrollCheck);
       }
-    }
-    document.addEventListener("scroll", onScroll);
+    };
+    document.addEventListener('scroll', onScroll);
     return () => {
-      document.removeEventListener("scroll", onScroll);
-    }
-  }
-  );
-  
+      document.removeEventListener('scroll', onScroll);
+    };
+  });
+
   return (
-    <header className={`sticky top-0 transition-all ${scroll ? "shadow-xl" : "shadow-2xl"}`}>
-      <nav className={`bg-white border-gray-200 transition-all dark:bg-[#111] ${scroll ? "p-4 lg:px-6" : "p-8 lg:px-6"}`}>
+    <header className={`sticky top-0 transition-all ${scroll ? 'shadow-xl' : 'shadow-2xl'}`}>
+      <nav
+        className={`bg-white border-gray-200 transition-all dark:bg-[#111] ${scroll ? 'p-4 lg:px-6' : 'p-8 lg:px-6'}`}
+      >
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl">
           <Link to="/" className="flex items-center">
             <img
@@ -72,6 +74,7 @@ const Navigation = () => {
                 ></path>
               </svg>
             </button>
+            <ThemeToggler />
           </div>
           {/* <div className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
           <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">

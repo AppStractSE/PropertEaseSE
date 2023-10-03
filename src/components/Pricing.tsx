@@ -17,12 +17,12 @@ const Pricing = ({ scrollRef }: Props) => {
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`flex flex-col p-6 mx-auto w-full text-center text-gray-900 bg-white rounded-lg border border-gray-300 dark:border-stone-900 xl:p-8 dark:bg-primary-950 dark:text-white hover:border-primary-300 hover:bg-primary-50 dark:hover:bg-primary-900 ${
-                plan.mostPopular ? 'relative border-primary-600 border-2' : ''
+              className={`flex flex-col p-6 mx-auto w-full text-center text-gray-900 bg-white rounded-lg border border-gray-300 dark:border-stone-900 xl:p-8 dark:bg-primary-950 dark:text-white hover:border-primary-300 hover:bg-primary-50 dark:hover:bg-primary-900 hover:shadow-2xl ${
+                plan.mostPopular ? 'relative border-primary-600 border-2 mp-container' : ''
               }`}
             >
               {plan.mostPopular && (
-                <div className="absolute -top-5 right-0 left-0 mx-auto w-32 rounded-full bg-gradient-to-b from-primary-400 to-primary-800 px-3 py-2 text-sm font-medium text-white">
+                <div className="absolute -top-5 right-0 left-0 mx-auto w-32 rounded-full bg-gradient-to-b from-primary-400 to-primary-800 px-3 py-2 text-sm font-medium text-white mp-highlight">
                   Mest populär
                 </div>
               )}
