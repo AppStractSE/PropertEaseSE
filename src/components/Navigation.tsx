@@ -18,7 +18,7 @@ const Navigation = () => {
   });
 
   return (
-    <header className={`sticky top-0 transition-all ${scroll ? 'shadow-xl' : 'shadow-2xl'}`}>
+    <header className={`z-10 sticky top-0 transition-all ${scroll ? 'shadow-xl' : 'shadow-2xl'}`}>
       <nav
         className={`bg-white border-gray-200 transition-all dark:bg-[#111] ${scroll ? 'p-4 lg:px-6' : 'p-8 lg:px-6'}`}
       >
