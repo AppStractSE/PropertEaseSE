@@ -8,12 +8,10 @@ interface Props {
 const PricingCard = ({ plan }: Props) => {
   return (
     <div
-      className={`flex flex-col w-full md:w-[18rem] lg:w-[20rem] md:min-h-[420px] cursor-default p-4 md:p-6 xl:p-8 text-left md:text-center text-gray-900
-      bg-white rounded-lg border  dark:bg-[#121212] dark:text-white hover:border-primary-300 hover:bg-primary-50 dark:hover:bg-primary-900 shadow-xl hover:shadow-2xl dark:shadow-none ${
-        plan.mostPopular
-          ? 'relative border-primary-600 dark:border-primary-900 border-2 mp-container'
-          : 'border-gray-300 dark:border-stone-950'
-      }`}
+      className={`flex flex-col w-full md:w-[18rem] lg:w-[24rem] md:min-h-[420px] cursor-default p-4 md:p-6 xl:p-8 text-left md:text-center text-gray-900
+      bg-white rounded-lg border border-gray-300 dark:border-stone-950 dark:bg-[#121212] dark:text-white hover:border-primary-300 hover:bg-primary-50 dark:hover:bg-primary-900 shadow-xl hover:shadow-2xl dark:shadow-none
+      ${plan.mostPopular ? 'relative mp-container' : ''}
+          `}
     >
       {plan.mostPopular && (
         <div className="mb-4 md:mb-0 md:absolute md:-top-3 right-3 md:right-0 md:left-0 md:mx-auto w-32 rounded md:rounded-full bg-gradient-to-b from-primary-400 to-primary-800 px-2 py-1 text-xs text-center font-medium text-white mp-highlight">
@@ -26,15 +24,16 @@ const PricingCard = ({ plan }: Props) => {
           <p className="font-light text-gray-500 sm:text-lg dark:text-gray-200 md:h-[60px]">{plan.description}</p>
         </div>
         <div className="flex md:justify-center items-baseline my-2 md:my-8 border-b pb-4 md:pb-8 border-gray-500">
-          <span className="mr-2 text-xl md:text-5xl font-bold">{plan.price}kr</span>
+          <span className="text-xl md:text-5xl font-bold">{plan.price}</span>
+          <span className='text-lg md:text-2xl font-bold mr-2'>kr</span>
           <span className="text-gray-500 dark:text-gray-400">/månad</span>
         </div>
       </div>
-      <ul role="list" className=" mb-6 md:mb-8 space-y-2 md:space-y-4 text-left pt-2 md:pt-0">
+      <ul role="list" className="mb-6 md:mb-8 space-y-2 md:space-y-4 text-left pt-2 md:pt-0">
         {plan.features.map((feature) => (
-          <li key={feature} className="flex space-x-2">
-            <div className='mt-1'>
-            <HiOutlineCheck />
+          <li key={feature} className="flex space-x-2 border-gray-500">
+            <div className="mt-1">
+              <HiOutlineCheck />
             </div>
             <div>{feature}</div>
           </li>
