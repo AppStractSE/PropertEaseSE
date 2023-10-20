@@ -30,11 +30,11 @@ const PricingCard = ({ plan }: Props) => {
           <span className="text-gray-500 dark:text-gray-400">/månad</span>
         </div>
       </div>
-      <ul role="list" className=" mb-6 md:mb-8 space-y-2 md:space-y-4 text-left pt-2 md:pt-0">
+      <ul role="list" className="mb-6 md:mb-8 space-y-2 md:space-y-4 text-left pt-2 md:pt-0">
         {plan.features.map((feature) => (
-          <li key={feature} className="flex space-x-2">
-            <div className='mt-1'>
-            <HiOutlineCheck />
+          <li key={feature} className="flex space-x-2 border-gray-500">
+            <div className="mt-1">
+              <HiOutlineCheck />
             </div>
             <div>{feature}</div>
           </li>
