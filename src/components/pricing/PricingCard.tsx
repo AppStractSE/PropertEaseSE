@@ -8,7 +8,7 @@ interface Props {
 const PricingCard = ({ plan }: Props) => {
   return (
     <div
-      className={`flex flex-col w-full md:w-[18rem] lg:w-[20rem] md:min-h-[420px] cursor-default p-4 md:p-6 xl:p-8 text-left md:text-center text-gray-900
+      className={`flex flex-col w-full md:w-[18rem] lg:w-[22rem] md:min-h-[420px] lg:min-h-[460px] cursor-default p-4 md:p-6 xl:p-8 text-left md:text-center text-gray-900
       bg-white rounded-lg border  dark:bg-[#121212] dark:text-white hover:border-primary-300 hover:bg-primary-50 dark:hover:bg-primary-900 shadow-xl hover:shadow-2xl dark:shadow-none ${
         plan.mostPopular
           ? 'relative border-primary-600 dark:border-primary-900 border-2 mp-container'
@@ -25,8 +25,8 @@ const PricingCard = ({ plan }: Props) => {
           <h3 className="mb-2 text-xl md:text-2xl font-semibold">{plan.name}</h3>
           <p className="font-light text-gray-500 sm:text-lg dark:text-gray-200 md:h-[60px]">{plan.description}</p>
         </div>
-        <div className="flex md:justify-center items-baseline my-2 md:my-8 border-b pb-4 md:pb-8 border-gray-500">
-          <span className="mr-2 text-xl md:text-5xl font-bold">{plan.price}kr</span>
+        <div className="flex md:justify-center items-baseline my-2 md:my-6 border-b pb-4 md:pb-8 border-gray-500">
+          <span className="mr-2 text-xl md:text-3xl lg:text-5xl font-bold">{plan.price}kr</span>
           <span className="text-gray-500 dark:text-gray-400">/månad</span>
         </div>
       </div>
