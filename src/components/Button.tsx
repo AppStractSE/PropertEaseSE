@@ -7,12 +7,9 @@ interface Props {
 }
 
 const Button = ({ title, className, href, colors, openInNewTab }: Props) => {
-    return (
-        <a
-        target={openInNewTab ? '_blank' : '_self'}
-         href={href}>
-      <button
-        type="button"
+  return (
+    <a target={openInNewTab ? '_blank' : '_self'} href={href}>
+      <div
         className={`
           border
           rounded-lg
@@ -28,10 +25,10 @@ const Button = ({ title, className, href, colors, openInNewTab }: Props) => {
           ${className ? className : ''}
         `}
       >
-            {title}
-      </button>
-         </a>
-    );
-  };
-  
-  export default Button;
+        {title}
+      </div>
+    </a>
+  );
+};
+
+export default Button;

@@ -6,8 +6,8 @@ interface Props {
 
 const Hero = ({ scrollToPricing }: Props) => {
   return (
-    <section className="dark:bg-primary-800 bg-primary-200 h-screen md:h-auto items-center flex">
-      <div className="flex flex-col md:grid max-w-screen-2xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-24 lg:grid-cols-12 h-full">
+    <section className="h-screen md:h-auto items-center flex bg-gradient-to-b from-primary-400 to-white dark:from-primary-600 dark:to-[#191919]">
+      <div className="flex flex-col justify-evenly md:grid max-w-screen-2xl px-4 py-8 mt-48 lg:mt-24 mx-auto lg:gap-8 xl:gap-0 lg:py-24 lg:grid-cols-12 h-full">
         <div className="mr-auto place-self-center lg:col-span-7">
           <h1 className="max-w-2xl mb-4 lg:mb-8 text-3xl font-bold tracking-tight leading-none md:text-4xl xl:text-5xl dark:text-white">
             Fastighetsskötsel. Enkelt.
@@ -26,7 +26,7 @@ const Hero = ({ scrollToPricing }: Props) => {
             <BsArrowRight size={20} className="ml-2" />
           </a>
         </div>
-        <div className="lg:mt-0 lg:col-span-5 flex-1 items-center flex md:block">
+        <div className="lg:mt-0 lg:col-span-5 items-center flex md:block">
           <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png" alt="mockup" />
         </div>
       </div>
